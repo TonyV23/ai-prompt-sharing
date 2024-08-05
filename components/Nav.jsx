@@ -38,8 +38,8 @@ const Nav = () => {
               Sign Out
             </button>
             <Link href="/profile">
-              <Image src="/assets/images/logo.svg" width={37} height={37} className="rounded-full"
-                alt="profile" />
+              <Image src="/assets/images/profile-circle.svg" width={37} height={37} className="rounded-full"
+                alt="profile picture" />
             </Link>
           </div>
         ) : (
@@ -61,7 +61,7 @@ const Nav = () => {
       <div className="sm:hidden flex relative">
         {isUserLoggedIn ? (
           <div className="flex">
-            <Image src="/assets/images/logo.svg" width={37} height={37} className="rounded-full" alt="profile" onClick={() => setToggleDropdown((previous) => !previous)} />
+            <Image src="/assets/images/profile-circle.svg" width={37} height={37} className="rounded-full" alt="profile" onClick={() => setToggleDropdown((previous) => !previous)} />
             {toggleDropdown && (
               <div className="dropdown">
                 <Link
@@ -78,7 +78,7 @@ const Nav = () => {
                 >
                   Create Prompt
                 </Link>
-                <button type="button" onClick={() => {
+                <button type="button" className="mt-2 w-full black_btn" onClick={() => {
                   setToggleDropdown(false);
                   signOut();
                 }}>
